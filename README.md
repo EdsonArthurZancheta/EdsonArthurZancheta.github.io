@@ -11,7 +11,7 @@ Programming: Python, SQL
 Data Visualization: Power BI, Tableau, Matplotlib
 Report Generation: Microsoft Office
 
-### Experience
+# Experience
 
 Company: Hyundai
 
@@ -19,7 +19,7 @@ Location: Piracicaba, Brazil
 
 Duration: 05/2022 - 03/2024
 
-Responsibilities:
+### Responsibilities:
 
 Data Organization and Reporting: Assisted in the development and maintenance of reports to track key performance metrics within the department.
 
@@ -27,6 +27,6 @@ Continuous Improvement Initiatives: Supported the implementation of tools and pr
 
 Data-Driven Decision Making: Contributed to development processes through the utilization of programming and technology tools, including Power BI, for informed decision-making.
 
-### Projects:
+# Projects:
 
 - Project 1
