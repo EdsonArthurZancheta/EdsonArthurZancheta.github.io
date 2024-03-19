@@ -12,10 +12,9 @@ Data Visualization: Power BI, Tableau, Matplotlib
 Report Generation: Microsoft Office
 
 ### Experience
+
 Company: Hyundai
-
 Location: Piracicaba, Brazil 
-
 Duration: 05/2022 - 03/2024
 
 Responsibilities:
