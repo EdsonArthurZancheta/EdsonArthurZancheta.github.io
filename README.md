@@ -1,8 +1,8 @@
 # Edson Arthur Zancheta, 29
 
-### São Carlos, Brazil
+### Location: São Carlos, Brazil
 
-# Data Analyst
+# Data Engineer
 
 
 ### Technical Skills:
@@ -17,7 +17,7 @@ Company: Hyundai
 
 Location: Piracicaba, Brazil 
 
-Duration: 05/2022 - 03/2024
+Duration: 05/2022 - Present
 
 ### Responsibilities:
 
@@ -29,4 +29,6 @@ Data-Driven Decision Making: Contributed to development processes through the ut
 
 # Projects:
 
-- Project 1
+### Final Paper (Bachelor in Mechanical Engineering)
+
+- OTIMIZAÇÃO DE PROCESSOS EM UMA MONTADORA AUTOMOTIVA: EFICÁCIA GERAL DO EQUIPAMENTO (OEE) ATRAVÉS DA ANÁLISE DE DADOS COM PYTHON
