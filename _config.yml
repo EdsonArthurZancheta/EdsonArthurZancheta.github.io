@@ -4,3 +4,5 @@ title: Edson Arthur Zancheta
 show_downloads: true
 #google_analytics:
 theme: jekyll-theme-minimal
+minimal_theme_color: '#000000' # Cor de fundo preto
+minimal_theme_text_color: '#FFFFFF' # Cor do texto branca
