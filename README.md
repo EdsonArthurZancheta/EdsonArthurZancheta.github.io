@@ -17,10 +17,18 @@ Sou um apaixonado por dados, dedicado a transformar informações brutas em insi
 
 ## Habilidades Técnicas:
 
-Linguagens: Python, SQL
-Visualização de Dados: Power BI, Tableau, Matplotlib
-Geração de Relatórios: Microsoft Office
+Idiomas:
+- Inglês Fluente
 
+Softwares e Ferramentas
+- Python
+- C++
+- Power BI
+- Tableau
+- Six Sigma Yellow Belt
+- SQL
+- NX
+- Excel Avançado
 
 ## Experiência
 
