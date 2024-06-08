@@ -6,12 +6,8 @@ Endereço: Cidade Jardim, São Carlos – SP (Brasil)
 LinkedIn: www.linkedin.com/in/edsonarthurzancheta
 
 ### OBJETIVO
-Profissional concluindo formação em Engenharia Mecânica com paixão por análise
-de dados, buscando oportunidades desafiadoras em empresas que utilizem
-tecnologias de ponta para resolver problemas complexos. Possuo experiência em
-análise de dados e estou ansioso para aplicar meus conhecimentos na área bem
-como em projetos de aprendizado de máquina e Deep Learning
-
+Profissional concluindo formação em Engenharia Mecânica com paixão por análise de dados, buscando oportunidades desafiadoras em empresas que utilizem tecnologias de ponta para resolver problemas complexos. Possuo experiência em análise de dados e estou ansioso para aplicar meus conhecimentos na área bem como em projetos de aprendizado de máquina e Deep Learning.
+ 
 ### Location: São Carlos, Brazil
 
 Data Engineer | São Carlos, Brasil
@@ -26,30 +22,26 @@ Visualização de Dados: Power BI, Tableau, Matplotlib
 Geração de Relatórios: Microsoft Office
 
 
-## EXPERIÊNCIA
+## Experiência
 
 ## Hyundai Motor Brasil
 
 ### Estagiário de Produção Geral – Administrativo | novembro/2023 – Atual
-Análise de dados, criação de Dashboards utilizando Tableau e MS Power BI.
-Desenvolvimento Full Stack de softwares para uso interno.
+Análise de dados, criação de Dashboards utilizando Tableau e MS Power BI. Desenvolvimento Full Stack de softwares para uso interno.
 
 ### Estagiário de Analista de Qualidade | maio/2023 – novembro/2023
-Importação de dados e criação de dashboards periodicamente utilizando o Tableau
-para os KPI’s da gestão da qualidade. Averiguação de testes realizados pelos
-fornecedores. Gerenciamento dos dados de qualidade: atualização do banco de
-dados SQL, MS Access para aquisição de dados.
+
+Importação de dados e criação de dashboards periodicamente utilizando o Tableau para os KPI’s da gestão da qualidade. Averiguação de testes realizados pelos fornecedores. Gerenciamento dos dados de qualidade: atualização 
+do banco de dados SQL, MS Access para aquisição de dados.
+
 ### Estagiário de Produção Geral – Manutenção | maio/2022 – maio/2023
-Auxiliar na preparação e criação de relatórios. Suporte com práticas e ferramentas
-de melhoria, redução de custo e automação. Auxiliar no processo de
-desenvolvimento com programação, ferramentas de tecnologia e Power BI.
+Auxiliar na preparação e criação de relatórios. Suporte com práticas e ferramentas de melhoria, redução de custo e automação. Auxiliar no processo de desenvolvimento com programação, ferramentas de tecnologia e Power BI. 
+
 ## Empresa Júnior de Engenharia Mecânica da UFSCar – ENGRENAR Jr.
+
 ###Consultor de RH | Diretor de RH | março/2015 – dezembro/2016
-Gestão de Pessoas: Responsável por selecionar, desenvolver e gerir os membros
-da organização, promovendo um ambiente de trabalho colaborativo e preparando
-os estudantes para o mercado de trabalho.
-Projetos: participei na execução de projetos de fornos para celulares, equoterapia
-e desenho técnico
+Gestão de Pessoas: Responsável por selecionar, desenvolver e gerir os membros da organização, promovendo um ambiente de trabalho colaborativo e preparando os estudantes para o mercado de trabalho. Projetos: participei na 
+ execução de projetos de fornos para celulares, equoterapia e desenho técnico
 
 ## Projetos:
 
