@@ -1,14 +1,15 @@
 # Edson Arthur Zancheta
 
 ### INFORMAÇÕES PESSOAIS
+
 E-mail: edson.arthurzancheta@gmail.com
+
 Endereço: Cidade Jardim, São Carlos – SP (Brasil)
+
 LinkedIn: www.linkedin.com/in/edsonarthurzancheta
 
 ### OBJETIVO
 Profissional concluindo formação em Engenharia Mecânica com paixão por análise de dados, buscando oportunidades desafiadoras em empresas que utilizem tecnologias de ponta para resolver problemas complexos. Possuo experiência em análise de dados e estou ansioso para aplicar meus conhecimentos na área bem como em projetos de aprendizado de máquina e Deep Learning.
- 
-### Location: São Carlos, Brazil
 
 ### Educação
 
@@ -57,5 +58,8 @@ Gestão de Pessoas: Responsável por selecionar, desenvolver e gerir os membros 
 
 ## Projetos:
 
-Trabalho de Conclusão de Curso (Engenharia Mecânica): Otimização de processos em uma montadora automotiva: Eficácia Geral do Equipamento (OEE) através da análise de dados com Python.
+### Trabalho de Conclusão de Curso (Engenharia Mecânica)
+Otimização de processos em uma montadora automotiva: Eficácia Geral do Equipamento (OEE) através da análise de dados com Python.
+
+
 
