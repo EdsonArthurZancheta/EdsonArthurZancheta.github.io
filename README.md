@@ -1,48 +1,34 @@
-<div align="center">
+# Edson Arthur Zancheta, 29
 
-<img src="https://via.placeholder.com/150" alt="Sua foto"> 
+### Location: São Carlos, Brazil
 
-# <span style="color: #00FFFF;">Edson Arthur Zancheta</span>, 29
+# Data Engineer
 
-### <span style="color: #00FFFF;">Location:</span> São Carlos, Brazil
 
-## <span style="color: #00FFFF;">Data Engineer</span>
+### Technical Skills:
 
-</div>
+Programming: Python, SQL
+Data Visualization: Power BI, Tableau, Matplotlib
+Report Generation: Microsoft Office
 
----
+# Experience
 
-### <span style="color: #007FFF;">Technical Skills:</span>
-<div align="center">
+Company: Hyundai
 
-| Programming  | Data Visualization | Report Generation |
-| :------------- | :------------- | :------------- |
-| <span style="color: #00FFFF;">Python</span> | <span style="color: #00FFFF;">Power BI</span> | <span style="color: #00FFFF;">Microsoft Office</span> |
-| <span style="color: #00FFFF;">SQL</span>  | <span style="color: #00FFFF;">Tableau</span> |   |
-|  | <span style="color: #00FFFF;">Matplotlib</span> |   |
+Location: Piracicaba, Brazil 
 
-</div>
+Duration: 05/2022 - Present
 
----
+### Responsibilities:
 
-## <span style="color: #007FFF;">Experience</span>
+Data Organization and Reporting: Assisted in the development and maintenance of reports to track key performance metrics within the department.
 
-**Company:** Hyundai <br>
-**Location:** Piracicaba, Brazil <br>
-**Duration:** 05/2022 - Present <br>
+Continuous Improvement Initiatives: Supported the implementation of tools and practices aimed at cost reduction, process optimization, and automation.
 
-### <span style="color: #007FFF;">Responsibilities:</span>
+Data-Driven Decision Making: Contributed to development processes through the utilization of programming and technology tools, including Power BI, for informed decision-making.
 
-* <span style="color: #00FFFF;">Data Organization and Reporting:</span> Assisted in the development and maintenance of reports to track key performance metrics within the department.
-* <span style="color: #00FFFF;">Continuous Improvement Initiatives:</span> Supported the implementation of tools and practices aimed at cost reduction, process optimization, and automation.
-* <span style="color: #00FFFF;">Data-Driven Decision Making:</span> Contributed to development processes through the utilization of programming and technology tools, including Power BI, for informed decision-making.
+# Projects:
 
----
+### Final Paper (Bachelor in Mechanical Engineering)
 
-## <span style="color: #007FFF;">Projects:</span>
-
-### <span style="color: #007FFF;">Final Paper (Bachelor in Mechanical Engineering)</span>
-
-* <span style="color: #00FFFF;">OTIMIZAÇÃO DE PROCESSOS EM UMA MONTADORA AUTOMOTIVA: EFICÁCIA GERAL DO EQUIPAMENTO (OEE) ATRAVÉS DA ANÁLISE DE DADOS COM PYTHON</span>
-
-</div>
+- OTIMIZAÇÃO DE PROCESSOS EM UMA MONTADORA AUTOMOTIVA: EFICÁCIA GERAL DO EQUIPAMENTO (OEE) ATRAVÉS DA ANÁLISE DE DADOS COM PYTHON
