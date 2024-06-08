@@ -2,33 +2,24 @@
 
 ### Location: São Carlos, Brazil
 
-# Data Engineer
+Data Engineer | São Carlos, Brasil
+Sobre Mim:
 
+Sou um apaixonado por dados, dedicado a transformar informações brutas em insights valiosos. Minha paixão pela programação me permite criar soluções que impulsionam a tomada de decisões estratégicas.
 
-### Technical Skills:
+Habilidades Técnicas:
 
-Programming: Python, SQL
-Data Visualization: Power BI, Tableau, Matplotlib
-Report Generation: Microsoft Office
+Linguagens: Python, SQL
+Visualização de Dados: Power BI, Tableau, Matplotlib
+Geração de Relatórios: Microsoft Office
+Experiência:
 
-# Experience
+Hyundai | Piracicaba, Brasil | 05/2022 - Presente
 
-Company: Hyundai
+Organização e Relatórios de Dados: Desenvolvi e mantive relatórios para acompanhar métricas de desempenho.
+Melhoria Contínua: Implementei ferramentas e práticas para redução de custos, otimização de processos e automação.
+Tomada de Decisões Baseada em Dados: Contribuí para processos de desenvolvimento usando programação e ferramentas como Power BI.
+Projetos:
 
-Location: Piracicaba, Brazil 
+Trabalho de Conclusão de Curso (Engenharia Mecânica): Otimização de processos em uma montadora automotiva: Eficácia Geral do Equipamento (OEE) através da análise de dados com Python. [Imagem do projeto aqui]
 
-Duration: 05/2022 - Present
-
-### Responsibilities:
-
-Data Organization and Reporting: Assisted in the development and maintenance of reports to track key performance metrics within the department.
-
-Continuous Improvement Initiatives: Supported the implementation of tools and practices aimed at cost reduction, process optimization, and automation.
-
-Data-Driven Decision Making: Contributed to development processes through the utilization of programming and technology tools, including Power BI, for informed decision-making.
-
-# Projects:
-
-### Final Paper (Bachelor in Mechanical Engineering)
-
-- OTIMIZAÇÃO DE PROCESSOS EM UMA MONTADORA AUTOMOTIVA: EFICÁCIA GERAL DO EQUIPAMENTO (OEE) ATRAVÉS DA ANÁLISE DE DADOS COM PYTHON
