@@ -4,21 +4,20 @@
 
 E-mail: edson.arthurzancheta@gmail.com
 
-Endereço: Cidade Jardim, São Carlos – SP (Brasil)
+Endereço: Avenida Piracicamirim, Piracicamirim, Piracicaba, São Paulo, Brasil
 
 LinkedIn: www.linkedin.com/in/edsonarthurzancheta
 
 ### OBJETIVO
-Profissional concluindo formação em Engenharia Mecânica com paixão por análise de dados, buscando oportunidades desafiadoras em empresas que utilizem tecnologias de ponta para resolver problemas complexos. Possuo experiência em análise de dados e estou ansioso para aplicar meus conhecimentos na área bem como em projetos de aprendizado de máquina e Deep Learning.
+Profissional com paixão por análise de dados, buscando oportunidades em empresas que utilizem tecnologias de ponta para resolver problemas complexos. Possuo experiência em análise de dados e posso aplicar meus conhecimentos na área bem como em projetos de aprendizado de máquina e Deep Learning.
 
 ### Educação
 
 #### Universidade Federal de São Carlos – UFSCar
-Bacharelado em Engenharia Mecânica | março/2015 – Atual.
+Bacharelado em Engenharia Mecânica | março/2015 – setembro/2024.
 
 #### ETEC Prefeito Alberto Feres
 Técnico em Mecatrônica | janeiro/2011 – dezembro/2012.
-
 
 ## Habilidades Técnicas:
 
@@ -27,19 +26,22 @@ Idiomas:
 
 Softwares e Ferramentas
 - Python
-- C++
 - Power BI
 - Tableau
 - Six Sigma Yellow Belt
 - SQL
-- NX
-- Excel Avançado
 
 ## Experiência
 
 ### Hyundai Motor Brasil
 
-#### Estagiário de Produção Geral – Administrativo | novembro/2023 – Atual
+### Analista de Homologação - Administrativo | setembro/2024 - atual
+Responsável por verificar testes e certificados, garantindo que atendam aos requisitos funcionais e técnicos. Identificar falhas, documenta resultados e acompanha as regulamentações para América Central e do Sul.
+
+### Assistente de Homologação - Administrativo | junho/2024 - setembro/2024
+Responsável por verificar testes e certificados, garantindo que atendam aos requisitos funcionais e técnicos. Identificar falhas, documenta resultados e acompanha as regulamentações para América Central e do Sul.
+
+#### Estagiário de Produção Geral – Administrativo | novembro/2023 – junho/2024
 Análise de dados, criação de Dashboards utilizando Tableau e MS Power BI. Desenvolvimento Full Stack de softwares para uso interno.
 
 #### Estagiário de Analista de Qualidade | maio/2023 – novembro/2023
