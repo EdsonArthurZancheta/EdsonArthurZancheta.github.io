@@ -35,10 +35,10 @@ Softwares e Ferramentas
 
 ### Hyundai Motor Brasil
 
-### Analista de Homologação - Administrativo | setembro/2024 - atual
+#### Analista de Homologação - Administrativo | setembro/2024 - atual
 Responsável por verificar testes e certificados, garantindo que atendam aos requisitos funcionais e técnicos. Identificar falhas, documenta resultados e acompanha as regulamentações para América Central e do Sul.
 
-### Assistente de Homologação - Administrativo | junho/2024 - setembro/2024
+#### Assistente de Homologação - Administrativo | junho/2024 - setembro/2024
 Responsável por verificar testes e certificados, garantindo que atendam aos requisitos funcionais e técnicos. Identificar falhas, documenta resultados e acompanha as regulamentações para América Central e do Sul.
 
 #### Estagiário de Produção Geral – Administrativo | novembro/2023 – junho/2024
