@@ -1,15 +1,184 @@
+# Book settings
 title: Edson Arthur Zancheta
-logo: /assets/img/profile.jpg # Optional: if you want a logo in the header, some themes use this
-description: Data-oriented Mechanical Engineering graduate with hands-on experience in data analysis and process automation.
-show_downloads: false
-# google_analytics:
+author: Edson Arthur Zancheta
+# email: your-email@domain.com # Already in author section
+description: >- # this means to ignore newlines until "baseurl:"
+  Data-oriented Mechanical Engineering graduate with hands-on experience in data analysis and process automation.
+# baseurl: "" # for user/organization pages, usually empty. If it's a project site, then /repository-name/
+url: "https://edsonarthurzancheta.github.io" # IMPORTANT: Replace with your GitHub Pages URL
 
-remote_theme: pages-themes/minimal@v0.2.0
+# Theme settings
+remote_theme: sproogen/modern-resume-theme
+style: auto # One of: auto (default), light, dark
+# To disable dark mode, set style to light or comment out darkmode: below
+# darkmode: false # One of: true, false (default), never
+
+# Profile information
+author:
+  name: Edson Arthur Zancheta
+  job_title: Mechanical Engineer | Data Analyst
+  profile_picture: /asset/img/profile.jpg # Path to your profile image, relative to the root.
+                                          # Ensure 'asset/img/profile.jpg' exists at the root of your repo.
+  email: edson.arthurzancheta@gmail.com
+  phone: +55 (19) 99300-8521
+  address: Av. Piracicamirim, 3039, Piracicamirim, Piracicaba, São Paulo, Brazil # Optional
+  linkedin_username: edsonarthurzancheta
+  github_username: EdsonArthurZancheta # Your GitHub username (if you want to link it)
+  # twitter_username: your_twitter # Optional
+  # Behance, Dribbble, Facebook, Flickr, Instagram, Medium, Pinterest, StackOverflow, YouTube
+
+# Page content
+# Each item in the 'content' array is a section in your resume.
+#
+# layout options:
+#   list:   Default layout, used for sections like Experience, Education, Projects, etc.
+#   text:   Simple text layout, good for About Me, Objective, or custom text sections.
+#
+# For 'list' layout items, you can use:
+#   layout: left|right|top|top-right|top-middle (alignment of title/subtitle vs description)
+#   title: Main title (e.g., Company Name, University Name)
+#   sub_title: Subtitle (e.g., Job Title, Degree)
+#   caption: Dates, location, or short additional info
+#   link: A URL for the title
+#   quote: A short introductory sentence or highlight for the item (optional)
+#   description: | # Markdown enabled
+#     - Bullet point 1
+#     - Bullet point 2
+#
+# For 'text' layout items:
+#   content: | # Markdown enabled
+#     Your text here. You can use Markdown formatting.
+
+content:
+  - title: Objective
+    layout: text
+    content: |
+      Data-oriented Mechanical Engineering graduate from Universidade Federal de São Carlos (UFSCar) with hands-on experience in data analysis and process automation. Proficient in creating interactive dashboards using Power BI and Tableau, and skilled in streamlining workflows to improve operational efficiency. Demonstrated ability to deliver data-driven insights for better decision-making. Seeking to contribute my technical and analytical expertise to a forward-thinking team focused on data, innovation and efficiency.
+
+  - title: Education
+    layout: list
+    content:
+      - layout: top # Or left, right, etc. as you prefer
+        title: Universidade Federal de São Carlos – UFSCar
+        sub_title: Bachelor of Science in Mechanical Engineering
+        caption: Expected October 2024
+        # description: | # Optional: if you want to add more details
+        #   - Relevant coursework...
+
+      - layout: top
+        title: ETEC Prefeito Alberto Feres
+        sub_title: Technical Degree in Mechatronics
+        caption: December 2012
+
+  - title: Experience
+    layout: list
+    content:
+      - layout: left
+        title: Hyundai Motor Brasil
+        sub_title: Research and Development Jr. Analyst
+        caption: June 2024 - Current
+        # quote: > # Optional: Short company description or role overview
+        #   Focused on product and process improvement.
+        description: |
+          - Research and develop product and industrial process improvement projects, focusing on quality enhancement, energy efficiency, and noise/vibration reduction.
+          - Manage R&D project activities, including homologation, cost and resource allocation, to ensure timely and efficient project delivery.
+
+      - layout: left
+        title: Hyundai Motor Brasil
+        sub_title: General Production Intern - Administrative
+        caption: January 2024 - May 2024
+        description: |
+          - Conducted data analysis and developed interactive dashboards using Python, Tableau and Power BI to support decision-making processes.
+          - Designed and implemented python software solutions for internal use, improving operational efficiency.
+
+      - layout: left
+        title: Hyundai Motor Brasil
+        sub_title: Quality Intern
+        caption: June 2023 - December 2023
+        description: |
+          - Created and maintained Tableau dashboards to visualize and track quality management KPIs.
+          - Verified and validated test results provided by suppliers to ensure compliance with quality standards.
+          - Managed quality data by updating SQL databases and utilizing MS Access for efficient data collection and reporting.
+
+      - layout: left
+        title: Hyundai Motor Brasil
+        sub_title: General Production Intern - Maintenance
+        caption: May 2022 - May 2023
+        description: |
+          - Assisted in the preparation and creation of detailed reports to support maintenance and production processes.
+          - Supported the implementation of improvement initiatives, cost reduction strategies, and automation practices to enhance operational efficiency.
+          - Utilized programming tools and created data visualizations with Power BI to provide actionable insights for decision-making.
+
+  - title: Technical Skills
+    layout: list # You can also use 'text' layout with Markdown bullets if you prefer
+    content:
+      - title: Data Analysis
+        # sub_title: # Optional: Proficiency level or specific tools
+      - title: Data Visualization
+      - title: Machine Learning
+      - title: Python
+      - title: Power BI
+      - title: SQL
+      - title: Tableau
+    # Alternative for skills using 'text' layout if you want more control over formatting:
+    # layout: text
+    # content: |
+    #   - **Data Analysis**: Proficient in analyzing complex datasets.
+    #   - **Data Visualization**: Power BI, Tableau.
+    #   - **Machine Learning**: Foundational knowledge.
+    #   - **Programming**: Python (Pandas, NumPy, Scikit-learn).
+    #   - **Databases**: SQL.
+
+  - title: Courses and Certifications
+    layout: list
+    content:
+      - layout: top
+        title: Data Engineering
+        sub_title: ADA (Git, GitHub, Docker and web scrapping)
+        # caption: Year or relevant info # Optional
+
+      - layout: top
+        title: Python - Data Analysis and Machine Learning
+        sub_title: DataSide
+        # caption: Year # Optional
+
+      - layout: top
+        title: Tableau Fundamentals Workshop
+        sub_title: Qsoft
+        # caption: Year # Optional
+
+      - layout: top
+        title: Yellow Belt - Six Sigma
+        sub_title: Excelint
+        # caption: Year # Optional
+
+# Footer settings
+footer_show_references: true # Set to false to hide the "Powered by Modern Resume Theme" in the footer
+
+# Collections for website data
+collections:
+  # Define collections if the theme uses them for specific data types,
+  # but for modern-resume-theme, most content is in _config.yml or _data.
+  # For this theme, direct _config.yml content is primary.
+  # Example (though likely not needed for this theme's core resume features):
+  # projects:
+  #   output: true
+  #   permalink: /projects/:path/
+
 plugins:
-  - jekyll-remote-theme
+ - jekyll-remote-theme # Required for GitHub Pages to use remote themes
+ # - jekyll-seo-tag # Optional: for better SEO
+ # - jekyll-sitemap # Optional: for sitemap generation
 
-# To use a different theme, you would change 'remote_theme'.
-# For example, for a CV-focused theme:
-# remote_theme: pages-themes/minimal@v0.2.0
-# remote_theme: sharu725/online-cv
-# Each theme might have its own specific configuration options.
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md # This will be your repo's README, not part of the themed site
+  - style.css # Your old style.css, not needed for this theme
+  # - assets/css/style.css # If you had one here from previous instructions
