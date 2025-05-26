@@ -4,12 +4,12 @@ description: Data-oriented Mechanical Engineering graduate with hands-on experie
 show_downloads: false
 # google_analytics:
 
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: sproogen/modern-resume-theme 
 plugins:
   - jekyll-remote-theme
 
 # To use a different theme, you would change 'remote_theme'.
 # For example, for a CV-focused theme:
-# remote_theme: sproogen/modern-resume-theme
+# remote_theme: pages-themes/minimal@v0.2.0
 # remote_theme: sharu725/online-cv
 # Each theme might have its own specific configuration options.
