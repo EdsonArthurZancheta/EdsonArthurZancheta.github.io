@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/img/profile.jpg" alt="Edson Arthur Zancheta" width="200" class="profile-img">
-</p>
-
 # Edson Arthur Zancheta
 
 ## PERSONAL INFORMATION
