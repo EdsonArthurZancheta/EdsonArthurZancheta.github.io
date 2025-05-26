@@ -17,8 +17,8 @@ style: auto # One of: auto (default), light, dark
 author:
   name: Edson Arthur Zancheta
   job_title: Mechanical Engineer | Data Analyst
-  profile_picture: /asset/img/profile.jpg # Path to your profile image, relative to the root.
-                                          # Ensure 'asset/img/profile.jpg' exists at the root of your repo.
+  profile_picture: /assets/img/profile.jpg # Path to your profile image, relative to the root.
+                                          
   email: edson.arthurzancheta@gmail.com
   phone: +55 (19) 99300-8521
   address: Av. Piracicamirim, 3039, Piracicamirim, Piracicaba, São Paulo, Brazil # Optional
