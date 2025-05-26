@@ -1,54 +1,28 @@
-# Book settings
+# Site settings
 title: Edson Arthur Zancheta
-author: Edson Arthur Zancheta
-# email: your-email@domain.com # Already in author section
-description: >- # this means to ignore newlines until "baseurl:"
+author: Edson Arthur Zancheta # General Jekyll setting
+description: >- # this means to ignore newlines until "url:"
   Data-oriented Mechanical Engineering graduate with hands-on experience in data analysis and process automation.
-# baseurl: "" # for user/organization pages, usually empty. If it's a project site, then /repository-name/
-url: "https://edsonarthurzancheta.github.io" # IMPORTANT: Replace with your GitHub Pages URL
+url: "https://edsonarthurzancheta.github.io" # Your GitHub Pages URL
+baseurl: "" # Should be empty for a user/organization page (username.github.io)
 
 # Theme settings
 remote_theme: sproogen/modern-resume-theme
-style: auto # One of: auto (default), light, dark
-# To disable dark mode, set style to light or comment out darkmode: below
-# darkmode: false # One of: true, false (default), never
+style: auto # Options: auto (default), light, dark
 
-# Profile information
-author:
+# Profile information (specific to modern-resume-theme)
+author: # This block is primarily used by the theme for your details
   name: Edson Arthur Zancheta
   job_title: Mechanical Engineer | Data Analyst
-  profile_picture: /assets/img/profile.jpg # Path to your profile image, relative to the root.
-                                          
+  profile_picture: /asset/img/profile.jpg # Ensure this path is EXACT and case-sensitive
   email: edson.arthurzancheta@gmail.com
   phone: +55 (19) 99300-8521
   address: Av. Piracicamirim, 3039, Piracicamirim, Piracicaba, São Paulo, Brazil # Optional
   linkedin_username: edsonarthurzancheta
-  github_username: EdsonArthurZancheta # Your GitHub username (if you want to link it)
-  # twitter_username: your_twitter # Optional
-  # Behance, Dribbble, Facebook, Flickr, Instagram, Medium, Pinterest, StackOverflow, YouTube
+  github_username: EdsonArthurZancheta # Your GitHub username
 
 # Page content
 # Each item in the 'content' array is a section in your resume.
-#
-# layout options:
-#   list:   Default layout, used for sections like Experience, Education, Projects, etc.
-#   text:   Simple text layout, good for About Me, Objective, or custom text sections.
-#
-# For 'list' layout items, you can use:
-#   layout: left|right|top|top-right|top-middle (alignment of title/subtitle vs description)
-#   title: Main title (e.g., Company Name, University Name)
-#   sub_title: Subtitle (e.g., Job Title, Degree)
-#   caption: Dates, location, or short additional info
-#   link: A URL for the title
-#   quote: A short introductory sentence or highlight for the item (optional)
-#   description: | # Markdown enabled
-#     - Bullet point 1
-#     - Bullet point 2
-#
-# For 'text' layout items:
-#   content: | # Markdown enabled
-#     Your text here. You can use Markdown formatting.
-
 content:
   - title: Objective
     layout: text
@@ -58,12 +32,10 @@ content:
   - title: Education
     layout: list
     content:
-      - layout: top # Or left, right, etc. as you prefer
+      - layout: top
         title: Universidade Federal de São Carlos – UFSCar
         sub_title: Bachelor of Science in Mechanical Engineering
         caption: Expected October 2024
-        # description: | # Optional: if you want to add more details
-        #   - Relevant coursework...
 
       - layout: top
         title: ETEC Prefeito Alberto Feres
@@ -77,8 +49,6 @@ content:
         title: Hyundai Motor Brasil
         sub_title: Research and Development Jr. Analyst
         caption: June 2024 - Current
-        # quote: > # Optional: Short company description or role overview
-        #   Focused on product and process improvement.
         description: |
           - Research and develop product and industrial process improvement projects, focusing on quality enhancement, energy efficiency, and noise/vibration reduction.
           - Manage R&D project activities, including homologation, cost and resource allocation, to ensure timely and efficient project delivery.
@@ -110,24 +80,15 @@ content:
           - Utilized programming tools and created data visualizations with Power BI to provide actionable insights for decision-making.
 
   - title: Technical Skills
-    layout: list # You can also use 'text' layout with Markdown bullets if you prefer
-    content:
+    layout: list
+    content: # Each item here is a skill. The 'title' field is used for the skill name.
       - title: Data Analysis
-        # sub_title: # Optional: Proficiency level or specific tools
       - title: Data Visualization
       - title: Machine Learning
       - title: Python
       - title: Power BI
       - title: SQL
       - title: Tableau
-    # Alternative for skills using 'text' layout if you want more control over formatting:
-    # layout: text
-    # content: |
-    #   - **Data Analysis**: Proficient in analyzing complex datasets.
-    #   - **Data Visualization**: Power BI, Tableau.
-    #   - **Machine Learning**: Foundational knowledge.
-    #   - **Programming**: Python (Pandas, NumPy, Scikit-learn).
-    #   - **Databases**: SQL.
 
   - title: Courses and Certifications
     layout: list
@@ -135,42 +96,27 @@ content:
       - layout: top
         title: Data Engineering
         sub_title: ADA (Git, GitHub, Docker and web scrapping)
-        # caption: Year or relevant info # Optional
 
       - layout: top
         title: Python - Data Analysis and Machine Learning
         sub_title: DataSide
-        # caption: Year # Optional
 
       - layout: top
         title: Tableau Fundamentals Workshop
         sub_title: Qsoft
-        # caption: Year # Optional
 
       - layout: top
         title: Yellow Belt - Six Sigma
         sub_title: Excelint
-        # caption: Year # Optional
 
 # Footer settings
-footer_show_references: true # Set to false to hide the "Powered by Modern Resume Theme" in the footer
-
-# Collections for website data
-collections:
-  # Define collections if the theme uses them for specific data types,
-  # but for modern-resume-theme, most content is in _config.yml or _data.
-  # For this theme, direct _config.yml content is primary.
-  # Example (though likely not needed for this theme's core resume features):
-  # projects:
-  #   output: true
-  #   permalink: /projects/:path/
+footer_show_references: true # Shows "Powered by Modern Resume Theme"
 
 plugins:
- - jekyll-remote-theme # Required for GitHub Pages to use remote themes
- # - jekyll-seo-tag # Optional: for better SEO
- # - jekyll-sitemap # Optional: for sitemap generation
+ - jekyll-remote-theme # Required for GitHub Pages
 
-# Exclude from processing
+# Exclude from processing.
+# Ensure your old CSS file is listed here if it still exists, or delete it.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -179,6 +125,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - README.md # This will be your repo's README, not part of the themed site
-  - style.css # Your old style.css, not needed for this theme
-  # - assets/css/style.css # If you had one here from previous instructions
+  - README.md
+  - style.css # If you have an old style.css in the root
+  - assets/css/style.css # If you have an old one here
