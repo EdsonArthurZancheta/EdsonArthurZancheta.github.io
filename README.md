@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/img/profile.jpg" alt="Edson Arthur Zancheta" width="200">
+  <img src="asset/img/profile.jpg" alt="Edson Arthur Zancheta" width="200">
 </p>
 
 # Edson Arthur Zancheta
@@ -7,9 +7,13 @@
 ### PERSONAL INFORMATION
 
 Email: edson.arthurzancheta@gmail.com
+
 Address: Av. Piracicamirim, 3039, Piracicamirim, Piracicaba, São Paulo, Brazil
+
 Phone: +55 (19) 99300-8521
+
 LinkedIn: linkedin.com/in/edsonarthurzancheta
+
 
 ### OBJECTIVE
 Data-oriented Mechanical Engineering graduate from Universidade Federal de São Carlos (UFSCar) with hands-on experience in data analysis and process automation. Proficient in creating interactive dashboards using Power BI and Tableau, and skilled in streamlining workflows to improve operational efficiency. Demonstrated ability to deliver data-driven insights for better decision-making.  Seeking to contribute my technical and analytical expertise to a forward-thinking team focused on data, innovation and efficiency.
