@@ -1,5 +1,3 @@
-# Edson Arthur Zancheta
-
 ## PERSONAL INFORMATION
 
 **Email:** edson.arthurzancheta@gmail.com
