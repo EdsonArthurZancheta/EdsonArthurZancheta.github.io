@@ -1,79 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
 
+/* Base Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    color: #4A4A4A; /* Darker gray for text */
+    background-color: #f8f9fa; /* Light gray background */
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 0;
+    font-size: 16px;
 }
 
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff; /* White content background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    border-radius: 8px;
+}
+
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
-    color: #2c3e50;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    color: #2c3e50; /* Dark blue-gray for headings */
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    font-weight: 500;
 }
 
-h1 {
-    font-size: 2.5em;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-h3 {
-    font-size: 1.5em;
-    color: #34495e;
-}
-
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding-left: 0;
-}
-
-ul ul {
-    list-style-type: circle;
-    margin-left: 20px;
-}
-
-b, strong {
+h1 { /* Name */
+    font-size: 2.8em;
     font-weight: 700;
+    text-align: center;
+    color: #34495e; /* Slightly softer dark blue */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    border-bottom: none; /* Removed bottom border from your old H1 */
+}
+
+h2 { /* Main Section Titles: PERSONAL INFORMATION, OBJECTIVE, etc. */
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #3498db; /* Primary blue color */
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid #3498db; /* Underline for section titles */
+    margin-top: 2em;
+}
+
+h2:first-of-type {
+    margin-top: 1em; /* Less margin for the first section title after name/intro */
+}
+
+
+h3 { /* Sub-section Titles: Company Name, University Name */
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #2980b9; /* Darker shade of blue */
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+    color: #555;
+}
+
+strong, b {
+    font-weight: 600; /* Bolder for emphasis */
+    color: #333;
 }
 
 a {
-    color: #3498db;
+    color: #2980b9; /* Blue for links */
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #1c5a82; /* Darker blue on hover */
     text-decoration: underline;
 }
 
-/* Specific styling for sections */
-.section {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Profile Image */
+.profile-img {
+    border-radius: 50%; /* Circular image */
+    border: 5px solid #3498db; /* Blue border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em; /* Space below image */
+    display: block; /* Ensure it behaves as a block for centering if p align center is removed */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Improve code readability for skills/certifications */
-code {
-    font-family: 'Fira Code', monospace;
-    background-color: #ecf0f1;
-    padding: 2px 4px;
-    border-radius: 4px;
+/* Specific Sections Styling */
+
+/* Personal Information */
+#personal-information p { /* Assuming PERSONAL INFORMATION is the first h2, its content will be in subsequent p tags */
+    margin-bottom: 0.5em;
 }
 
-/* Adjust for smaller screens */
+/* Skills List */
+#technical-skills ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Gap between skill items */
+}
+
+#technical-skills ul li {
+    background-color: #eaf2f8; /* Light blue background for skills */
+    color: #2c3e50;
+    padding: 8px 15px;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.95em;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Experience & Education Lists */
+#experience ul, #education ul, #courses-and-certifications ul { /* General styling for lists in these sections */
+    list-style-position: outside;
+    padding-left: 20px; /* Indent list items */
+}
+
+#experience ul li, #education ul li, #courses-and-certifications ul li {
+    margin-bottom: 0.8em; /* Space between list items */
+}
+
+/* Targeting specific list items in Experience for job details */
+#experience > ul > li { /* If experience points are direct children `li` of `ul` under `h2` */
+   /* Styles for bullet points under job roles */
+}
+
+
+/* Footer or Meta Info (if you add any) */
+.meta {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Markdown generated content alignment */
+/* The initial <p align="center"> for the image should handle centering it.
+   The h1 is styled for text-align: center. */
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    #technical-skills ul {
+        flex-direction: column; /* Stack skills vertically on small screens */
+        align-items: flex-start;
+    }
+
+    #technical-skills ul li {
+        width: auto; /* Adjust width if needed, or keep as is for varied lengths */
+        margin-bottom: 8px; /* Ensure gap when stacked */
+    }
+}
+
+@media (max-width: 480px) {
     body {
-        padding: 10px;
+        font-size: 15px;
+    }
+    .container {
+        margin: 10px;
+        padding: 15px;
     }
     h1 {
         font-size: 2em;
