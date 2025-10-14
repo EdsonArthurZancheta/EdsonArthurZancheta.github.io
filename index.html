@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edson Arthur Zancheta - Portfólio</title>
+    <style>
+        :root {
+            --bg-color: #1a1a2e;
+            --primary-color: #0f3460;
+            --secondary-color: #e94560;
+            --font-color: #dcdcdc;
+            --card-bg: #16213e;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg-color);
+            color: var(--font-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 2rem;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 6rem 0 2rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        
+        #about p {
+            font-size: 1.1rem;
+            text-align: center;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .skill-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.2);
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .project-card h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        
+        .project-card .project-links a {
+            color: var(--font-color);
+            text-decoration: none;
+            margin-right: 1rem;
+            background: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .project-card .project-links a:hover {
+            background: var(--secondary-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--card-bg);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-container.left {
+            left: 0;
+        }
+
+        .timeline-container.right {
+            left: 50%;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #fff;
+            border: 4px solid var(--secondary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .right::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--card-bg);
+            position: relative;
+            border-radius: 6px;
+        }
+        
+        .timeline-content h3 { color: var(--secondary-color); }
+        .timeline-content h4 { font-style: italic; opacity: 0.8;}
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: var(--primary-color);
+            margin-top: 2rem;
+        }
+        
+        footer .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Edson Arthur Zancheta</h1>
+            <nav>
+                <a href="#about">Sobre</a>
+                <a href="#projects">Projetos</a>
+                <a href="#experience">Experiência</a>
+                <a href="#contact">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">Sobre Mim</h2>
+            <p>
+                Engenheiro Mecânico altamente analítico com especialização em análise de dados e automação de processos. Minha expertise reside em identificar oportunidades para ganhos de eficiência e alavancar insights baseados em dados para otimizar operações. Proficiente no desenvolvimento de ferramentas interativas de machine learning e business intelligence para monitorar KPIs e apoiar decisões financeiras estratégicas.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Python</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Machine Learning (Scikit-learn, PyTorch)</div>
+                <div class="skill-item">Data Visualization (Tableau, Power BI)</div>
+                <div class="skill-item">C# / C++</div>
+                <div class="skill-item">Git & GitHub</div>
+                <div class="skill-item">Docker</div>
+                <div class="skill-item">Data Engineering</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Projetos</h2>
+            
+            <div class="project-card">
+                <h3>Nome do Projeto 1</h3>
+                <p>
+                    Aqui você pode descrever seu projeto. Fale sobre o problema que ele resolve, as tecnologias utilizadas (ex: Python, Tableau, Scikit-learn) e o impacto que ele gerou.
+                </p>
+                <div class="project-links">
+                    <a href="#" target="_blank">Ver no GitHub</a>
+                    <a href="#" target="_blank">Demonstração</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Nome do Projeto 2</h3>
+                <p>
+                    Outro projeto interessante. Talvez uma automação de processos, uma análise de dados complexa ou uma ferramenta de BI que você desenvolveu na Hyundai.
+                </p>
+                <div class="project-links">
+                    <a href="#" target="_blank">Ver no GitHub</a>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Experiência Profissional</h2>
+            <div class="timeline">
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3>Analista Jr. de Pesquisa e Desenvolvimento</h3>
+                        <h4>Hyundai Motor Brasil (Jun 2024 - Atual)</h4>
+                        <p>Pesquisa e desenvolvimento de projetos de melhoria de produtos e processos industriais, com foco em qualidade, eficiência energética e redução de ruído/vibração.</p>
+                    </div>
+                </div>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3>Estagiário de Produção - Administrativo</h3>
+                        <h4>Hyundai Motor Brasil (Jan 2024 - Mai 2024)</h4>
+                        <p>Análise de dados e desenvolvimento de dashboards interativos (Python, Tableau, Power BI). Implementação de soluções de software em Python para otimizar a eficiência operacional.</p>
+                    </div>
+                </div>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3>Estagiário de Qualidade</h3>
+                        <h4>Hyundai Motor Brasil (Jun 2023 - Dez 2023)</h4>
+                        <p>Criação e manutenção de dashboards em Tableau para KPIs de gestão da qualidade e gerenciamento de dados de qualidade com SQL e MS Access.</p>
+                    </div>
+                </div>
+                 <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3>Estagiário de Produção - Manutenção</h3>
+                        <h4>Hyundai Motor Brasil (Mai 2022 - Mai 2023)</h4>
+                        <p>Suporte na criação de relatórios de manutenção, implementação de iniciativas de melhoria e uso de Power BI para insights acionáveis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+             <h2 class="section-title">Formação Acadêmica</h2>
+             <div class="timeline">
+                 <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3>Pós-graduação em Data Science</h3>
+                        <h4>Universidade de Campinas (UNICAMP)</h4>
+                        <p>Agosto 2025 - Presente</p>
+                    </div>
+                </div>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3>Bacharel em Engenharia Mecânica</h3>
+                        <h4>Universidade Federal de São Carlos (UFSCar)</h4>
+                        <p>Concluído em Outubro de 2024</p>
+                    </div>
+                </div>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3>Técnico em Mecatrônica</h3>
+                        <h4>ETEC Prefeito Alberto Feres</h4>
+                        <p>Concluído em Dezembro de 2012</p>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Conecte-se Comigo</h2>
+            <p>E-mail: edson.arthurzancheta@gmail.com</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/edsonarthurzancheta" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">LeetCode</a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.7;">
+                Edson Arthur Zancheta &copy; 2025
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
