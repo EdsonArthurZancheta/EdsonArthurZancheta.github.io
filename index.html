@@ -6,11 +6,12 @@
     <title>Edson Arthur Zancheta - Portfólio</title>
     <style>
         :root {
-            --bg-color: #1a1a2e;
-            --primary-color: #0f3460;
-            --secondary-color: #e94560;
-            --font-color: #dcdcdc;
-            --card-bg: #16213e;
+            --bg-color: #0A192F; /* Azul Escuro da Asimov */
+            --primary-color: #1A2F4A; /* Azul Médio para cards/headers */
+            --secondary-color: #00ADB5; /* Azul Claro para destaques */
+            --font-color: #E0E0E0; /* Cinza Claro para texto principal */
+            --card-bg: #1A2F4A; /* Mesma cor do primary para cards */
+            --text-on-dark: #F5F5F5; /* Branco para textos em fundos escuros */
         }
 
         body {
@@ -31,8 +32,8 @@
 
         header {
             background: var(--primary-color);
-            color: #fff;
-            padding: 1.5rem 0;
+            color: var(--text-on-dark);
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -46,13 +47,27 @@
             align-items: center;
         }
 
+        header .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        header .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--secondary-color);
+        }
+
         header h1 {
             margin: 0;
             font-size: 1.5rem;
         }
 
         header nav a {
-            color: #fff;
+            color: var(--text-on-dark);
             text-decoration: none;
             margin-left: 1.5rem;
             font-size: 1.1rem;
@@ -95,39 +110,52 @@
             padding: 1.5rem;
             border-radius: 8px;
             transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .skill-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 173, 181, 0.2); /* Sombra com a cor secundária */
         }
         
-        .project-card {
+        .project-card, .pdf-download-card {
             background: var(--card-bg);
             margin-bottom: 2rem;
             padding: 2rem;
             border-radius: 8px;
-            border-left: 5px solid var(--primary-color);
+            border-left: 5px solid var(--secondary-color); /* Usando a cor de destaque */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        .project-card h3 {
+        .project-card h3, .pdf-download-card h3 {
             color: var(--secondary-color);
             margin-top: 0;
         }
         
-        .project-card .project-links a {
-            color: var(--font-color);
+        .project-card .project-links a, .pdf-download-card a {
+            color: var(--text-on-dark);
             text-decoration: none;
             margin-right: 1rem;
-            background: var(--primary-color);
+            background: var(--secondary-color); /* Botão com a cor de destaque */
             padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: background 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .project-card .project-links a:hover {
-            background: var(--secondary-color);
+        .project-card .project-links a:hover, .pdf-download-card a:hover {
+            background: #008D96; /* Um tom ligeiramente mais escuro para hover */
         }
+        
+        /* Ícone de download para PDFs */
+        .pdf-download-card a::before {
+            content: '⬇️'; /* Unicode para seta para baixo */
+            font-size: 1rem;
+            line-height: 1;
+        }
+
 
         .timeline {
             position: relative;
@@ -167,8 +195,8 @@
             width: 25px;
             height: 25px;
             right: -17px;
-            background-color: #fff;
-            border: 4px solid var(--secondary-color);
+            background-color: var(--bg-color); /* Fundo da bolinha */
+            border: 4px solid var(--secondary-color); /* Borda da bolinha */
             top: 15px;
             border-radius: 50%;
             z-index: 1;
@@ -183,6 +211,7 @@
             background-color: var(--card-bg);
             position: relative;
             border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         
         .timeline-content h3 { color: var(--secondary-color); }
@@ -193,10 +222,11 @@
             padding: 2rem 0;
             background: var(--primary-color);
             margin-top: 2rem;
+            color: var(--text-on-dark);
         }
         
         footer .social-links a {
-            color: #fff;
+            color: var(--text-on-dark);
             font-size: 1.5rem;
             margin: 0 1rem;
             text-decoration: none;
@@ -205,6 +235,40 @@
         footer .social-links a:hover {
             color: var(--secondary-color);
         }
+        
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            header h1 {
+                text-align: center;
+            }
+            header nav {
+                margin-top: 10px;
+            }
+            header nav a {
+                margin: 0 0.5rem;
+            }
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-container.left, .timeline-container.right {
+                left: 0%;
+            }
+            .timeline-container.left::after, .timeline-container.right::after {
+                left: 15px;
+            }
+            .timeline-content {
+                margin-left: 0;
+            }
+        }
 
     </style>
 </head>
@@ -212,12 +276,17 @@
 
     <header>
         <div class="container">
-            <h1>Edson Arthur Zancheta</h1>
+            <div class="profile-header">
+                <img src="profile.jpg" alt="Edson Arthur Zancheta" class="profile-pic">
+                <h1>Edson Arthur Zancheta</h1>
+            </div>
             <nav>
                 <a href="#about">Sobre</a>
+                <a href="#skills">Habilidades</a>
                 <a href="#projects">Projetos</a>
                 <a href="#experience">Experiência</a>
-                <a href="#contact">Contato</a>
+                <a href="#education">Formação</a>
+                <a href="#downloads">Downloads</a> <a href="#contact">Contato</a>
             </nav>
         </div>
     </header>
@@ -248,20 +317,29 @@
             <h2 class="section-title">Projetos</h2>
             
             <div class="project-card">
-                <h3>Nome do Projeto 1</h3>
+                <h3>Análise Preditiva de Falhas em Equipamentos Industriais</h3>
                 <p>
-                    Aqui você pode descrever seu projeto. Fale sobre o problema que ele resolve, as tecnologias utilizadas (ex: Python, Tableau, Scikit-learn) e o impacto que ele gerou.
+                    Desenvolvimento de um modelo de Machine Learning (Python com Scikit-learn) para prever falhas em equipamentos da linha de produção, otimizando a manutenção preventiva e reduzindo o tempo de inatividade. O projeto envolveu coleta, limpeza e engenharia de features de dados de sensores.
                 </p>
                 <div class="project-links">
                     <a href="#" target="_blank">Ver no GitHub</a>
+                    </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Dashboard Interativo de KPIs de Produção</h3>
+                <p>
+                    Criação de um dashboard dinâmico no Tableau/Power BI para monitorar KPIs de produção em tempo real, como eficiência da linha, refugo e tempo de ciclo. A ferramenta permitiu insights rápidos para a tomada de decisões gerenciais e identificação de gargalos.
+                </p>
+                <div class="project-links">
                     <a href="#" target="_blank">Demonstração</a>
                 </div>
             </div>
 
             <div class="project-card">
-                <h3>Nome do Projeto 2</h3>
+                <h3>Automação de Relatórios Financeiros com Python</h3>
                 <p>
-                    Outro projeto interessante. Talvez uma automação de processos, uma análise de dados complexa ou uma ferramenta de BI que você desenvolveu na Hyundai.
+                    Implementação de scripts em Python para automatizar a coleta e processamento de dados financeiros de diversas fontes, gerando relatórios semanais e mensais. Redução de 80% do tempo gasto na elaboração manual dos relatórios, aumentando a precisão dos dados.
                 </p>
                 <div class="project-links">
                     <a href="#" target="_blank">Ver no GitHub</a>
@@ -331,6 +409,20 @@
              </div>
         </section>
 
+        <section id="downloads">
+            <h2 class="section-title">Downloads</h2>
+            <div class="pdf-download-card">
+                <h3>Currículo (PDF)</h3>
+                <p>Baixe meu currículo completo em formato PDF.</p>
+                <a href="curriculo_edson_zancheta.pdf" download="curriculo_edson_zancheta.pdf">Baixar Currículo</a>
+            </div>
+            <div class="pdf-download-card">
+                <h3>Trabalho de Conclusão de Curso (TCC)</h3>
+                <p>Acesse meu TCC: "Título do seu TCC aqui".</p>
+                <a href="tcc_edson_zancheta.pdf" download="tcc_edson_zancheta.pdf">Baixar TCC</a>
+            </div>
+            </section>
+
     </main>
 
     <footer id="contact">
@@ -339,8 +431,8 @@
             <p>E-mail: edson.arthurzancheta@gmail.com</p>
             <div class="social-links">
                 <a href="https://linkedin.com/in/edsonarthurzancheta" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">GitHub</a>
-                <a href="#" target="_blank">LeetCode</a>
+                <a href="https://github.com/SeuUsuarioGitHub" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/SeuUsuarioLeetCode" target="_blank">LeetCode</a>
             </div>
             <p style="margin-top: 2rem; opacity: 0.7;">
                 Edson Arthur Zancheta &copy; 2025
