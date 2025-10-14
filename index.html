@@ -6,12 +6,12 @@
     <title>Edson Arthur Zancheta - Portfólio</title>
     <style>
         :root {
-            --bg-color: #0A192F; /* Azul Escuro da Asimov */
-            --primary-color: #1A2F4A; /* Azul Médio para cards/headers */
-            --secondary-color: #00ADB5; /* Azul Claro para destaques */
-            --font-color: #E0E0E0; /* Cinza Claro para texto principal */
-            --card-bg: #1A2F4A; /* Mesma cor do primary para cards */
-            --text-on-dark: #F5F5F5; /* Branco para textos em fundos escuros */
+            --bg-color: #000000; /* Fundo Preto */
+            --primary-color: #1a1a1a; /* Cinza bem escuro para cards */
+            --secondary-color: #FFA500; /* Laranja para destaques */
+            --font-color: #f0f0f0; /* Cinza claro para texto principal */
+            --card-bg: #101010; /* Fundo dos cards */
+            --text-on-dark: #FFFFFF; /* Branco para textos em fundos escuros */
         }
 
         body {
@@ -21,6 +21,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .container {
@@ -31,14 +32,15 @@
         }
 
         header {
-            background: var(--primary-color);
+            background: rgba(16, 16, 16, 0.8); /* Fundo semi-transparente */
+            backdrop-filter: blur(10px);
             color: var(--text-on-dark);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            border-bottom: 1px solid #222;
         }
 
         header .container {
@@ -50,15 +52,20 @@
         header .profile-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         header .profile-pic {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            width: 70px; /* Tamanho aumentado */
+            height: 70px; /* Tamanho aumentado */
+            border-radius: 50%; /* Perfeitamente redondo */
             object-fit: cover;
-            border: 2px solid var(--secondary-color);
+            border: 3px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+        
+        header .profile-pic:hover {
+            transform: scale(1.1) rotate(5deg);
         }
 
         header h1 {
@@ -72,6 +79,23 @@
             margin-left: 1.5rem;
             font-size: 1.1rem;
             transition: color 0.3s;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        header nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease-out;
+        }
+
+        header nav a:hover::after {
+            width: 100%;
         }
 
         header nav a:hover {
@@ -79,13 +103,13 @@
         }
 
         section {
-            padding: 6rem 0 2rem 0;
+            padding: 8rem 0 2rem 0;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             color: var(--secondary-color);
         }
         
@@ -109,13 +133,14 @@
             background: var(--card-bg);
             padding: 1.5rem;
             border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+            border: 1px solid #222;
         }
 
         .skill-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 173, 181, 0.2); /* Sombra com a cor secundária */
+            box-shadow: 0 5px 15px rgba(255, 165, 0, 0.2);
+            color: var(--secondary-color);
         }
         
         .project-card, .pdf-download-card {
@@ -123,8 +148,14 @@
             margin-bottom: 2rem;
             padding: 2rem;
             border-radius: 8px;
-            border-left: 5px solid var(--secondary-color); /* Usando a cor de destaque */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border-left: 5px solid var(--secondary-color);
+            border-top: 1px solid #222;
+            border-right: 1px solid #222;
+            transition: box-shadow 0.3s;
+        }
+
+        .project-card:hover, .pdf-download-card:hover {
+             box-shadow: 0 0 20px rgba(255, 165, 0, 0.15);
         }
 
         .project-card h3, .pdf-download-card h3 {
@@ -133,10 +164,11 @@
         }
         
         .project-card .project-links a, .pdf-download-card a {
-            color: var(--text-on-dark);
+            color: var(--bg-color);
+            font-weight: bold;
             text-decoration: none;
             margin-right: 1rem;
-            background: var(--secondary-color); /* Botão com a cor de destaque */
+            background: var(--secondary-color);
             padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: background 0.3s;
@@ -146,17 +178,9 @@
         }
 
         .project-card .project-links a:hover, .pdf-download-card a:hover {
-            background: #008D96; /* Um tom ligeiramente mais escuro para hover */
+            background: #cc8400; /* Laranja mais escuro para hover */
         }
         
-        /* Ícone de download para PDFs */
-        .pdf-download-card a::before {
-            content: '⬇️'; /* Unicode para seta para baixo */
-            font-size: 1rem;
-            line-height: 1;
-        }
-
-
         .timeline {
             position: relative;
             max-width: 1200px;
@@ -166,12 +190,12 @@
         .timeline::after {
             content: '';
             position: absolute;
-            width: 6px;
-            background-color: var(--card-bg);
+            width: 4px;
+            background-color: #222;
             top: 0;
             bottom: 0;
             left: 50%;
-            margin-left: -3px;
+            margin-left: -2px;
         }
 
         .timeline-container {
@@ -192,18 +216,18 @@
         .timeline-container::after {
             content: '';
             position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -17px;
-            background-color: var(--bg-color); /* Fundo da bolinha */
-            border: 4px solid var(--secondary-color); /* Borda da bolinha */
+            width: 20px;
+            height: 20px;
+            right: -14px;
+            background-color: var(--bg-color);
+            border: 4px solid var(--secondary-color);
             top: 15px;
             border-radius: 50%;
             z-index: 1;
         }
         
         .right::after {
-            left: -16px;
+            left: -14px;
         }
 
         .timeline-content {
@@ -211,7 +235,7 @@
             background-color: var(--card-bg);
             position: relative;
             border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: 1px solid #222;
         }
         
         .timeline-content h3 { color: var(--secondary-color); }
@@ -222,7 +246,7 @@
             padding: 2rem 0;
             background: var(--primary-color);
             margin-top: 2rem;
-            color: var(--text-on-dark);
+            border-top: 1px solid #222;
         }
         
         footer .social-links a {
@@ -236,20 +260,11 @@
             color: var(--secondary-color);
         }
         
-        /* Responsividade básica */
+        /* Responsividade */
         @media (max-width: 768px) {
             header .container {
                 flex-direction: column;
-                gap: 10px;
-            }
-            header h1 {
-                text-align: center;
-            }
-            header nav {
-                margin-top: 10px;
-            }
-            header nav a {
-                margin: 0 0.5rem;
+                gap: 15px;
             }
             .timeline::after {
                 left: 31px;
@@ -265,11 +280,7 @@
             .timeline-container.left::after, .timeline-container.right::after {
                 left: 15px;
             }
-            .timeline-content {
-                margin-left: 0;
-            }
         }
-
     </style>
 </head>
 <body>
@@ -285,8 +296,8 @@
                 <a href="#skills">Habilidades</a>
                 <a href="#projects">Projetos</a>
                 <a href="#experience">Experiência</a>
-                <a href="#education">Formação</a>
-                <a href="#downloads">Downloads</a> <a href="#contact">Contato</a>
+                <a href="#downloads">Downloads</a>
+                <a href="#contact">Contato</a>
             </nav>
         </div>
     </header>
@@ -304,8 +315,8 @@
             <div class="skills-grid">
                 <div class="skill-item">Python</div>
                 <div class="skill-item">SQL</div>
-                <div class="skill-item">Machine Learning (Scikit-learn, PyTorch)</div>
-                <div class="skill-item">Data Visualization (Tableau, Power BI)</div>
+                <div class="skill-item">Machine Learning</div>
+                <div class="skill-item">Data Visualization</div>
                 <div class="skill-item">C# / C++</div>
                 <div class="skill-item">Git & GitHub</div>
                 <div class="skill-item">Docker</div>
@@ -317,13 +328,23 @@
             <h2 class="section-title">Projetos</h2>
             
             <div class="project-card">
-                <h3>Análise Preditiva de Falhas em Equipamentos Industriais</h3>
+                <h3>Trabalho de Conclusão de Curso (TCC)</h3>
+                <p>
+                    Este TCC explora a otimização de processos em uma montadora automotiva, focando no cálculo da Eficácia Geral do Equipamento (OEE) através da análise de dados com Python. [cite: 61, 80] O estudo integra o processo de estampagem com técnicas de Data Science e Machine Learning para aprimorar a eficiência operacional e apoiar estratégias de manutenção preditiva. [cite: 84, 181] Utilizando Python, o trabalho demonstra na prática como a análise de dados pode identificar gargalos, prever a eficiência de lotes futuros e gerar insights valiosos para a tomada de decisão na Indústria 4.0. [cite: 86, 173]
+                </p>
+                <div class="project-links">
+                    <a href="TCC-Edson.pdf" download="TCC_Edson_Zancheta.pdf">Baixar TCC (PDF)</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Análise Preditiva de Falhas em Equipamentos</h3>
                 <p>
                     Desenvolvimento de um modelo de Machine Learning (Python com Scikit-learn) para prever falhas em equipamentos da linha de produção, otimizando a manutenção preventiva e reduzindo o tempo de inatividade. O projeto envolveu coleta, limpeza e engenharia de features de dados de sensores.
                 </p>
                 <div class="project-links">
                     <a href="#" target="_blank">Ver no GitHub</a>
-                    </div>
+                </div>
             </div>
 
             <div class="project-card">
@@ -331,19 +352,6 @@
                 <p>
                     Criação de um dashboard dinâmico no Tableau/Power BI para monitorar KPIs de produção em tempo real, como eficiência da linha, refugo e tempo de ciclo. A ferramenta permitiu insights rápidos para a tomada de decisões gerenciais e identificação de gargalos.
                 </p>
-                <div class="project-links">
-                    <a href="#" target="_blank">Demonstração</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Automação de Relatórios Financeiros com Python</h3>
-                <p>
-                    Implementação de scripts em Python para automatizar a coleta e processamento de dados financeiros de diversas fontes, gerando relatórios semanais e mensais. Redução de 80% do tempo gasto na elaboração manual dos relatórios, aumentando a precisão dos dados.
-                </p>
-                <div class="project-links">
-                    <a href="#" target="_blank">Ver no GitHub</a>
-                </div>
             </div>
             
         </section>
@@ -362,77 +370,38 @@
                     <div class="timeline-content">
                         <h3>Estagiário de Produção - Administrativo</h3>
                         <h4>Hyundai Motor Brasil (Jan 2024 - Mai 2024)</h4>
-                        <p>Análise de dados e desenvolvimento de dashboards interativos (Python, Tableau, Power BI). Implementação de soluções de software em Python para otimizar a eficiência operacional.</p>
+                        <p>Análise de dados e desenvolvimento de dashboards interativos (Python, Tableau, Power BI) e implementação de soluções de software para otimizar a eficiência operacional.</p>
                     </div>
                 </div>
                 <div class="timeline-container right">
                     <div class="timeline-content">
                         <h3>Estagiário de Qualidade</h3>
                         <h4>Hyundai Motor Brasil (Jun 2023 - Dez 2023)</h4>
-                        <p>Criação e manutenção de dashboards em Tableau para KPIs de gestão da qualidade e gerenciamento de dados de qualidade com SQL e MS Access.</p>
-                    </div>
-                </div>
-                 <div class="timeline-container left">
-                    <div class="timeline-content">
-                        <h3>Estagiário de Produção - Manutenção</h3>
-                        <h4>Hyundai Motor Brasil (Mai 2022 - Mai 2023)</h4>
-                        <p>Suporte na criação de relatórios de manutenção, implementação de iniciativas de melhoria e uso de Power BI para insights acionáveis.</p>
+                        <p>Criação e manutenção de dashboards em Tableau para KPIs e gerenciamento de dados de qualidade com SQL e MS Access.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section id="education">
-             <h2 class="section-title">Formação Acadêmica</h2>
-             <div class="timeline">
-                 <div class="timeline-container right">
-                    <div class="timeline-content">
-                        <h3>Pós-graduação em Data Science</h3>
-                        <h4>Universidade de Campinas (UNICAMP)</h4>
-                        <p>Agosto 2025 - Presente</p>
-                    </div>
-                </div>
-                <div class="timeline-container left">
-                    <div class="timeline-content">
-                        <h3>Bacharel em Engenharia Mecânica</h3>
-                        <h4>Universidade Federal de São Carlos (UFSCar)</h4>
-                        <p>Concluído em Outubro de 2024</p>
-                    </div>
-                </div>
-                <div class="timeline-container right">
-                    <div class="timeline-content">
-                        <h3>Técnico em Mecatrônica</h3>
-                        <h4>ETEC Prefeito Alberto Feres</h4>
-                        <p>Concluído em Dezembro de 2012</p>
-                    </div>
-                </div>
-             </div>
         </section>
 
         <section id="downloads">
             <h2 class="section-title">Downloads</h2>
             <div class="pdf-download-card">
-                <h3>Currículo (PDF)</h3>
+                <h3>Currículo (Inglês - PDF)</h3>
                 <p>Baixe meu currículo completo em formato PDF.</p>
-                <a href="curriculo_edson_zancheta.pdf" download="curriculo_edson_zancheta.pdf">Baixar Currículo</a>
+                <a href="Edson_Zancheta_CV_ingles.pdf" download="Edson_Zancheta_CV_ingles.pdf">Baixar Currículo</a>
             </div>
-            <div class="pdf-download-card">
-                <h3>Trabalho de Conclusão de Curso (TCC)</h3>
-                <p>Acesse meu TCC: "Título do seu TCC aqui".</p>
-                <a href="tcc_edson_zancheta.pdf" download="tcc_edson_zancheta.pdf">Baixar TCC</a>
-            </div>
-            </section>
+        </section>
 
     </main>
 
     <footer id="contact">
         <div class="container">
             <h2>Conecte-se Comigo</h2>
-            <p>E-mail: edson.arthurzancheta@gmail.com</p>
+            <p>E-mail: <a href="mailto:edson.arthurzancheta@gmail.com" style="color: var(--secondary-color);">edson.arthurzancheta@gmail.com</a></p>
             <div class="social-links">
-                <a href="https://linkedin.com/in/edsonarthurzancheta" target="_blank">LinkedIn</a>
-                <a href="https://github.com/SeuUsuarioGitHub" target="_blank">GitHub</a>
-                <a href="https://leetcode.com/SeuUsuarioLeetCode" target="_blank">LeetCode</a>
+                <a href="https://www.linkedin.com/in/edsonarthurzancheta" target="_blank">LinkedIn</a>
+                <a href="https://github.com/EdsonArthurZancheta" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/u/Edson_Zancheta/" target="_blank">LeetCode</a>
             </div>
             <p style="margin-top: 2rem; opacity: 0.7;">
                 Edson Arthur Zancheta &copy; 2025
