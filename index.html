@@ -212,6 +212,62 @@
             display: inline-block;
             border: 1px solid var(--secondary-color);
         }
+
+        /* ESTILOS DA GALERIA DE IMAGENS */
+        .gallery-container {
+            position: relative;
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .gallery-slide {
+            display: none; /* Esconde todos os slides por padrão */
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-slide .caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--font-color);
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Botões de Navegação da Galeria */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: var(--secondary-color);
+        }
         
         .timeline {
             position: relative;
@@ -372,6 +428,24 @@
                 <p>
                     Este TCC explora a otimização de processos em uma montadora automotiva, focando no cálculo da Eficácia Geral do Equipamento (OEE) através da análise de dados com Python. O estudo integra o processo de estampagem com técnicas de Data Science e Machine Learning para aprimorar a eficiência operacional e apoiar estratégias de manutenção preditiva. Utilizando Python, o trabalho demonstra na prática como a análise de dados pode identificar gargalos, prever a eficiência de lotes futuros e gerar insights valiosos para a tomada de decisão na Indústria 4.0.
                 </p>
+                
+                <div class="gallery-container">
+                    <div class="gallery-slide">
+                        <img src="producao.png" alt="Gráfico de produção">
+                        <div class="caption">Figura 1: Análise do Tempo Total de Produção por Peça</div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="geral.png" alt="Gráfico de OEE geral">
+                        <div class="caption">Figura 2: Distribuição Geral do Indicador OEE</div>
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="ml.png" alt="Gráfico de Machine Learning">
+                        <div class="caption">Figura 3: Comparação do OEE Real vs. Previsto pelo Modelo de ML</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
                 <div class="project-tags">
                     <span>Python</span> <span>Pandas</span> <span>Machine Learning</span> <span>Análise de Dados</span>
                 </div>
@@ -511,6 +585,26 @@
                 }
             });
         });
+    </script>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("gallery-slide");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
     </script>
 
 </body>
