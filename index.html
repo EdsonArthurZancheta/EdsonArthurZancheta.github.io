@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edson Arthur Zancheta - Portfólio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <style>
         :root {
             --bg-color: #000000; /* Fundo Preto */
@@ -12,6 +17,10 @@
             --font-color: #f0f0f0; /* Cinza claro para texto principal */
             --card-bg: #101010; /* Fundo dos cards */
             --text-on-dark: #FFFFFF; /* Branco para textos em fundos escuros */
+        }
+
+        html {
+            scroll-behavior: smooth; /* Rolagem suave */
         }
 
         body {
@@ -56,9 +65,9 @@
         }
 
         header .profile-pic {
-            width: 70px; /* Tamanho aumentado */
-            height: 70px; /* Tamanho aumentado */
-            border-radius: 50%; /* Perfeitamente redondo */
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--secondary-color);
             transition: transform 0.3s ease;
@@ -71,6 +80,12 @@
         header h1 {
             margin: 0;
             font-size: 1.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            min-height: 25px; /* Evita que o layout "pule" */
         }
 
         header nav a {
@@ -94,11 +109,11 @@
             transition: width 0.3s ease-out;
         }
 
-        header nav a:hover::after {
+        header nav a:hover::after, header nav a.active::after {
             width: 100%;
         }
 
-        header nav a:hover {
+        header nav a:hover, header nav a.active {
             color: var(--secondary-color);
         }
 
@@ -139,7 +154,7 @@
 
         .skill-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(255, 165, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(252, 90, 19, 0.2);
             color: var(--secondary-color);
         }
         
@@ -155,7 +170,7 @@
         }
 
         .project-card:hover, .pdf-download-card:hover {
-             box-shadow: 0 0 20px rgba(255, 165, 0, 0.15);
+             box-shadow: 0 0 20px rgba(252, 90, 19, 0.15);
         }
 
         .project-card h3, .pdf-download-card h3 {
@@ -168,6 +183,7 @@
             font-weight: bold;
             text-decoration: none;
             margin-right: 1rem;
+            margin-top: 1rem;
             background: var(--secondary-color);
             padding: 0.5rem 1rem;
             border-radius: 5px;
@@ -178,7 +194,23 @@
         }
 
         .project-card .project-links a:hover, .pdf-download-card a:hover {
-            background: #cc8400; /* Laranja mais escuro para hover */
+            background: #cc4810; /* Laranja mais escuro para hover */
+        }
+        
+        .project-tags {
+            margin-top: 1.5rem;
+        }
+
+        .project-tags span {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            border: 1px solid var(--secondary-color);
         }
         
         .timeline {
@@ -266,6 +298,11 @@
                 flex-direction: column;
                 gap: 15px;
             }
+            header .profile-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
             .timeline::after {
                 left: 31px;
             }
@@ -289,7 +326,10 @@
         <div class="container">
             <div class="profile-header">
                 <img src="profile.jpg" alt="Edson Arthur Zancheta" class="profile-pic">
-                <h1>Edson Arthur Zancheta</h1>
+                <div>
+                    <h1>Edson Arthur Zancheta</h1>
+                    <div class="subtitle"><span id="typed-text"></span></div>
+                </div>
             </div>
             <nav>
                 <a href="#about">Sobre</a>
@@ -304,87 +344,99 @@
 
     <main class="container">
         <section id="about">
-            <h2 class="section-title">Sobre Mim</h2>
-            <p>
+            <h2 class="section-title" data-aos="fade-up">Sobre Mim</h2>
+            <p data-aos="fade-up">
                 Sou engenheiro mecânico graduado pela Universidade Federal de São Carlos (UFSCar) e atualmente curso um MBA em Ciência de Dados na UNICAMP. Tenho uma trajetória focada em eficiência, identificação de oportunidades de melhoria e tomada de decisão baseada em dados. Tenho experiência no desenvolvimento de ferramentas interativas de machine learning e business intelligence para monitorar KPIs e apoiar decisões estratégicas. Iniciei minha trajetória profissional na área de ciência de dados da Hyundai Motor Brasil, onde desenvolvi um projeto que envolveu desde a captação de dados até a predição da eficácia geral do equipamento nas áreas de estamparia e solda. Meu trabalho consistia em capturar informações do CLP de cada peça estampada/soldada e transformá-las em insights úteis, além de prever a eficiência da produção para o dia seguinte. Atualmente, trabalho no departamento de Pesquisa e Desenvolvimento da Hyundai, na área de R&D e inovação.
             </p>
         </section>
 
         <section id="skills">
-            <h2 class="section-title">Habilidades Técnicas</h2>
+            <h2 class="section-title" data-aos="fade-up">Habilidades Técnicas</h2>
             <div class="skills-grid">
-                <div class="skill-item">Python</div>
-                <div class="skill-item">SQL</div>
-                <div class="skill-item">Machine Learning</div>
-                <div class="skill-item">Deep Learning</div>
-                <div class="skill-item">Data Visualization</div>
-                <div class="skill-item">C#</div>
-                <div class="skill-item">Git & GitHub</div>
-                <div class="skill-item">Data Engineering</div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="0">Python</div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="50">SQL</div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="100">Machine Learning</div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="150">Deep Learning</div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="200">Data Visualization</div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="250">C#</div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="300">Git & GitHub</div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="350">Data Engineering</div>
             </div>
         </section>
 
         <section id="projects">
-            <h2 class="section-title">Projetos</h2>
+            <h2 class="section-title" data-aos="fade-up">Projetos</h2>
             
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-left">
                 <h3>Trabalho de Conclusão de Curso (TCC)</h3>
                 <p>
                     Este TCC explora a otimização de processos em uma montadora automotiva, focando no cálculo da Eficácia Geral do Equipamento (OEE) através da análise de dados com Python. O estudo integra o processo de estampagem com técnicas de Data Science e Machine Learning para aprimorar a eficiência operacional e apoiar estratégias de manutenção preditiva. Utilizando Python, o trabalho demonstra na prática como a análise de dados pode identificar gargalos, prever a eficiência de lotes futuros e gerar insights valiosos para a tomada de decisão na Indústria 4.0.
                 </p>
+                <div class="project-tags">
+                    <span>Python</span> <span>Pandas</span> <span>Machine Learning</span> <span>Análise de Dados</span>
+                </div>
                 <div class="project-links">
-                    <a href="TCC-Edson.pdf" download="TCC_Edson_Zancheta.pdf">Baixar TCC (PDF)</a>
+                    <a href="TCC-Edson.pdf" download="TCC_Edson_Zancheta.pdf"><i class="fas fa-download"></i> Baixar TCC (PDF)</a>
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-right">
                 <h3>Análise Preditiva de Falhas em Equipamentos</h3>
                 <p>
                     Desenvolvimento de um modelo de Machine Learning (Python com Scikit-learn) para prever falhas em equipamentos da linha de produção, otimizando a manutenção preventiva e reduzindo o tempo de inatividade. O projeto envolveu coleta, limpeza e engenharia de features de dados de sensores.
                 </p>
+                <div class="project-tags">
+                    <span>Python</span> <span>Scikit-learn</span> <span>Manutenção Preditiva</span>
+                </div>
             </div>
             
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-left">
                 <h3>Controle de regulamentação e certificação para América Central e do Sul</h3>
                 <p>
                     Desenvolvimento de um desktop app em C# integrado com SQLite para o monitoramento de todas as regulamentações veiculares. Acesso e catálogo de todos os processos de homologação em aberto.
                 </p>
+                <div class="project-tags">
+                    <span>C#</span> <span>SQLite</span> <span>Desktop App</span> <span>SQL</span>
+                </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-right">
                 <h3>Dashboard Interativo de KPIs de Eficiência Energética para o Chile</h3>
                 <p>
                     Criação de um dashboard dinâmico no Power BI para monitorar KPIs de eficiência energética, como eficiência geral da frota, massa e cálculo da multa. A ferramenta permitiu insights rápidos para a tomada de decisões gerenciais e identificação de mudanças na frota.
                 </p>
+                <div class="project-tags">
+                    <span>Power BI</span> <span>DAX</span> <span>Business Intelligence</span>
+                </div>
             </div>
             
         </section>
 
         <section id="experience">
-            <h2 class="section-title">Experiência Profissional</h2>
+            <h2 class="section-title" data-aos="fade-up">Experiência Profissional</h2>
             <div class="timeline">
-                <div class="timeline-container right">
+                <div class="timeline-container right" data-aos="fade-left">
                     <div class="timeline-content">
                         <h3>Analista Jr. de Pesquisa e Desenvolvimento</h3>
                         <h4>Hyundai Motor Brasil (Jun 2024 - Atual)</h4>
                         <p>Inovação e projetos de desenvolvimento de tecnologia para uso interno do departamento. Regulamentação e certificação de países da America Central e do Sul, com foco em eficiência energética e redução de emissões veículares.</p>
                     </div>
                 </div>
-                <div class="timeline-container left">
+                <div class="timeline-container left" data-aos="fade-right">
                     <div class="timeline-content">
                         <h3>Estagiário de Manutenção - Solda - Administrativo</h3>
                         <h4>Hyundai Motor Brasil (Jan 2024 - Mai 2024)</h4>
                         <p>Engenharia e análise de dados e desenvolvimento de dashboards interativos (Python, Tableau, Power BI) e implementação de soluções de software para otimizar a eficiência operacional.</p>
                     </div>
                 </div>
-                <div class="timeline-container right">
+                <div class="timeline-container right" data-aos="fade-left">
                     <div class="timeline-content">
                         <h3>Estagiário de Qualidade</h3>
                         <h4>Hyundai Motor Brasil (Jun 2023 - Dez 2023)</h4>
                         <p>Criação e manutenção de dashboards em Tableau para KPIs e gerenciamento de dados de qualidade com SQL e MS Access.</p>
                     </div>
                 </div>
-                <div class="timeline-container left">
+                <div class="timeline-container left" data-aos="fade-right">
                     <div class="timeline-content">
                         <h3>Estagiário de Manutenção - Estamparia - Administrativo</h3>
                         <h4>Hyundai Motor Brasil (Mai 2022 - Mai 2023)</h4>
@@ -395,14 +447,13 @@
         </section>
 
         <section id="downloads">
-            <h2 class="section-title">Downloads</h2>
-            <div class="pdf-download-card">
+            <h2 class="section-title" data-aos="fade-up">Downloads</h2>
+            <div class="pdf-download-card" data-aos="fade-up">
                 <h3>Currículo (Inglês - PDF)</h3>
                 <p>Baixe meu currículo completo em formato PDF.</p>
-                <a href="Edson_Zancheta_CV_ingles.pdf" download="Edson_Zancheta_CV_ingles.pdf">Baixar Currículo</a>
+                <a href="Edson_Zancheta_CV_ingles.pdf" download="Edson_Zancheta_CV_ingles.pdf"><i class="fas fa-download"></i> Baixar Currículo</a>
             </div>
         </section>
-
     </main>
 
     <footer id="contact">
@@ -410,15 +461,57 @@
             <h2>Conecte-se Comigo</h2>
             <p>E-mail: <a href="mailto:edson.arthurzancheta@gmail.com" style="color: var(--secondary-color);">edson.arthurzancheta@gmail.com</a></p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/edsonarthurzancheta" target="_blank">LinkedIn</a>
-                <a href="https://github.com/EdsonArthurZancheta" target="_blank">GitHub</a>
-                <a href="https://leetcode.com/u/Edson_Zancheta/" target="_blank">LeetCode</a>
+                <a href="https://www.linkedin.com/in/edsonarthurzancheta" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/EdsonArthurZancheta" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://leetcode.com/u/Edson_Zancheta/" target="_blank" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
             </div>
             <p style="margin-top: 2rem; opacity: 0.7;">
                 Edson Arthur Zancheta &copy; 2025
             </p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#typed-text', {
+            strings: ['Engenheiro Mecânico', 'Cientista de Dados', 'Desenvolvedor'],
+            typeSpeed: 70,
+            backSpeed: 40,
+            backDelay: 1500,
+            loop: true
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Duração da animação
+            once: true,    // Animar apenas uma vez
+            offset: 50     // Offset para disparar a animação
+        });
+    </script>
+    
+    <script>
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('header nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').substring(1) === current) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
